@@ -1,15 +1,24 @@
+.cast{
+    padding: 20px;
+    margin: 10px;
+    border: 10px solid black;
+}
 .stage {
+    width: 1325px;
+    height: 400px;
     padding: 20px;
     margin: 10px;
     border: 10px solid black;
 }
 .player {
+    width: 350px;
     padding: 10px;
     margin: 5px;
     border: 5px solid silver;
 }
 
 .opponent {
+    width: 350;
     padding: 10px;
     margin: 5px;
     border: 5px solid red;
