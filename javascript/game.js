@@ -2,15 +2,27 @@
 var player = 100;
 var enemy = 100;
 var playerHit = Math.floor(Math.random() * 10);
-var enemyCounter = Math.random() * 7;
+var enemyCounter = Math.floor(Math.random() * 7);
 var playerCharacter = ("");
 var bonus = 50;
 
 
 window.onload = function() {
-    $(".character").on("$click", playerSelect);
-    $(".character").on("$click", opponentSelect);
-    $(".attack").on("$click", attack);
+    $(".character").click(function(){
+
+    });
+
+    $(".character").click(function(){
+
+    });
+
+    $(".attack").click(function() {
+        attack()
+        $("#player").text(player)
+        counterAttack()
+        $("#opponent").text(enemy)
+        
+    });
 };
     // Player Health bar
 $("#player").text(player)
@@ -32,18 +44,18 @@ function opponentSelect() {
 // Player Attack
 
 function attack() {
-    
-        
-    counterAttack()
+   return enemy-=playerHit;
 }
 
 // Enemy Counter Attack
 function counterAttack() {
-    
+    return player-=enemyCounter;
 }
-    
-    
+ //round end add player health bonus for win   
     
 
-
-//round end add player health bonus for win
+    if (enemy <= 0) {
+        var enemy = 100;
+        
+    }
+    
