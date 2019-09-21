@@ -8,11 +8,25 @@ var bonus = 50;
 
 
 window.onload = function() {
-    $(".character").click(function(){
+    $("#yoda").click(function(){
+      $('<img id="Yoda" class= "cast" src="./images/Yoda.jpg" alt="Yoda" height="250px" width="250px">').appendTo(".player")
+    });
+
+    $("#quiGon").click(function(){
+
+    });
+    $("#obiWan").click(function(){
 
     });
 
-    $(".character").click(function(){
+    $("#emperorPalpitine").click(function(){
+
+    });
+    $("#darthVader").click(function(){
+
+    });
+
+    $("#kyloRen").click(function(){
 
     });
 
