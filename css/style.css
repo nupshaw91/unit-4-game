@@ -18,7 +18,7 @@
 }
 
 .opponent {
-    width: 350;
+    width: 350px;
     padding: 10px;
     margin: 5px;
     border: 5px solid red;
@@ -30,14 +30,14 @@
     padding: 20px;
     margin: 10px;
     border: 10px solid black;
-    height: 250px;
+    height: 183px;
     width: 250px;
     }
 
 #quiGon{
     background-image: url(../images/Qui-\ gon.jpg);
     background-repeat: no-repeat;
-    height: 250px;
+    height: 183px;
     width: 250px;
 
 }
@@ -47,14 +47,14 @@
     padding: 20px;
     margin: 10px;
     border: 10px solid black;
-    height: 250px;
+    height: 183px;
     width: 250px;
     }
 
 #emperorPalpatine{
     background-image: url(../images/Emperor\ Palpatine.jpg);
     background-repeat: no-repeat;
-    height: 250px;
+    height: 183px;
     width: 250px;
 
 }
@@ -64,14 +64,14 @@
     padding: 20px;
     margin: 10px;
     border: 10px solid black;
-    height: 250px;
+    height: 183px;
     width: 250px;
     }
 
 #kyloRen{
     background-image: url(../images/Kylo-Ren.jpg);
     background-repeat: no-repeat;
-    height: 250px;
+    height: 183px;
     width: 250px;
 
 }
