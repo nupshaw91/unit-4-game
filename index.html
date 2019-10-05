@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Balance The Force</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    
+
 </head>
+
 <body>
-        <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <div class="row">
         <div class="col">
             <h1>Balance The Force</h1>
@@ -22,23 +25,25 @@
         <div class="col-8">
             <!-- characterSelect -->
             <div class="row">
-        <button id="yoda" class="cast"></button> 
-        <button id="quiGon" class="cast"></button> 
-        <button id="obiWan" class="cast"></button>
-        </div>
-        <div class="row">
-                <button id="emperorPalpatine" class="cast"></button> 
-                <button id="darthVader" class="cast"></button> 
-                <button id="kyloRen" class="cast"></button>
+                <button id="yoda"></button>
+                <button id="quiGon"></button>
+                <button id="obiWan" ></button>
+            </div>
+            <div class="row">
+                <button id="emperorPalpatine"></button>
+                <button id="darthVader"></button>
+                <button id="kyloRen"></button>
 
-        </div>
+            </div>
         </div>
         <div class="col-2"></div>
     </div>
 
-    <button class="attack"><h3>Attack</h3></button>
+    <button class="attack">
+        <h3>Attack</h3>
+    </button>
 
-    
+
 
     <div class="row stage">
         <div class="col-6">
@@ -46,19 +51,19 @@
             <div class="player">
                 <h3>Health:</h3>
                 <p id="player"></p>
-
             </div>
         </div>
+
         <div class="col-6">
             <!-- Enemy's choice  -->
             <div class="opponent">
-                    <h3>Health:</h3>
-                    <p id="opponent"></p>
+                <h3>Health:</h3>
+                <p id="opponent"></p>
 
             </div>
         </div>
     </div>
-    
+
     <script type="text/javascript" src="./javascript/game.js"></script>
 </body>
 
