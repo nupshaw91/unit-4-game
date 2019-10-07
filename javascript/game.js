@@ -3,8 +3,7 @@
 var game = [
     cast = ["yoda", "quiGon", "obiWan", "emperorPalpatine", "darthVader", "kyloRen",""],
     playerHit = Math.floor(Math.random() * (15 - 10) + 10),
-    enemyCounter = 100,
-    // Math.floor(Math.random() * (10 - 3) + 3),
+    enemyCounter = Math.floor(Math.random() * (10 - 3) + 3),
     bonus = 50,
     player = 100,
     enemy = 100,
