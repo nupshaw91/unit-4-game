@@ -1,11 +1,10 @@
 
-var player = 100;
-var enemy = 100;
+
 var game = [
-    cast = ["yoda", "quiGon", "obiWan", "emperorPalpatine", "darthVader", "kyloRen"],
-    health = 100,
-    playerHit = Math.floor(Math.random() * 12),
-    enemyCounter = Math.floor(Math.random() * 6),
+    cast = ["yoda", "quiGon", "obiWan", "emperorPalpatine", "darthVader", "kyloRen",""],
+    playerHit = Math.floor(Math.random() * (15 - 10) + 10),
+    enemyCounter = 100,
+    // Math.floor(Math.random() * (10 - 3) + 3),
     bonus = 50,
     player = 100,
     enemy = 100,
@@ -30,7 +29,7 @@ window.onload = function () {
             $("#" + cast[i]).appendTo("#opponent");
         };
         function combatants() {
-            if (cast.length >= 6) {
+            if (cast.length >= 7) {
                 playerOne()
             }
             else {
@@ -38,90 +37,48 @@ window.onload = function () {
             }
         }
         $(player).click(combatants)
-
-
-
-
-
     };
-
-
-
-
-    // console.log(cast)
-    //     $("#yoda").click(function () {
-    //         for (let i = 0; i < cast.length; i++) {
-
-    //         if (".player" == "#" + cast[i]){
-
-    //         $("#yoda").appendTo(".opponent")}
-
-    //         else $("#yoda").appendTo(".player");
-    //         }
-    //           console.log(cast[1]);
-    //     });
-
-    //     $("#quiGon").click(function () {
-
-    //         for (let i = 0; i < cast.length; i++) {
-    //         if (".player" ===   cast[i]){     
-    //         $("#quiGon").appendTo(".opponent")}
-    //         else $("#quiGon").appendTo(".player");
-    //         }
-    //         console.log("quigon was clicked");
-    //     // });
-    //     // $("#obiWan").click(function () {
-    //     //     console.log("obi was clicked");
-    //     // });
-
-    //     // $("#emperorPalpatine").click(function () {
-    //     //     console.log("palpatine was clicked");
-    //     // });
-    //     // $("#darthVader").click(function () {
-    //     //     console.log("vader was clicked");
-    //     // });
-
-    //     // $("#kyloRen").click(function () {
-    //     //     console.log("kylo was clicked");
-    //     // });
-
-    //     $(".attack").click(function () {
-    //         attack()
-    //         $("#player").text(player)
-    //         counterAttack()
-    //         $("#opponent").text(enemy)
-
-    //     });
-    // };
-
     // Player Health bar
-    $("#player").text(game.player)
+    $("#playerHealth").text(game[4]);
     // Enemy Health bar
-    $("#opponent").text(game.health)
+    $("#opponentHealth").text(game[5]);
 
-    // Player selection
-
-    function playerSelect() {
-
-    }
-
-    // Enemy selection
-    ;
-    function opponentSelect() {
-
-    }
-
-    // Player Attack
-
+    // Game funtions attached to aatack button.
+    // Health deductions
+    // Opponent clear or Game Restart
+    $(".attack").click(function () {
+        attack()
+        $("#playerHealth").text(game[4])
+        counterAttack()
+        $("#opponentHealth").text(game[5])
+        next()
+        $("#playerHealth").text(game[4])
+        $("#opponentHealth").text(game[5])
+        gameOver() 
+    });
     function attack() {
-        return enemy -= playerHit;
+        return game[5] -= game[1];
+
     }
 
     // Enemy Counter Attack
     function counterAttack() {
-        return player -= enemyCounter;
+        return game[4] -= game[2];
     }
-    //round end add player health bonus for win
+
+    //round end add player health bonus for win and clear opponent
+    function next() {
+    if (game[5] <= 0) {
+        game[5] = 100;
+        game[4] = game[4] + game[3];
+        $("#opponent").empty();
+    }
+}
+    function gameOver(){
+        if (game[4] <= 0) {
+        location.reload();
+        }
+    }
 
 
 };
